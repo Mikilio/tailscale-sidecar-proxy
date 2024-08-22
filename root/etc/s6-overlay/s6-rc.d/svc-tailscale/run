@@ -34,6 +34,6 @@ if [ -v TAILSCALE_SERVE_PORT ]; then
     else
         echo '[!] TAILSCALE_FUNNEL is disabled!'
         echo '[i] running `tailscale serve -bg '"${TAILSCALE_SERVE_SOURCE_MODE:-http}"'://localhost:'"${TAILSCALE_SERVE_PORT}"'`'
-        tailscale serve -bg "${TAILSCALE_SERVE_SOURCE_MODE:-http}"://localhost:"${TAILSCALE_SERVE_PORT}"
+        tailscale serve --bg "${TAILSCALE_SERVE_SOURCE_MODE:-http}"://localhost:"${TAILSCALE_SERVE_PORT}"
     fi
 fi
